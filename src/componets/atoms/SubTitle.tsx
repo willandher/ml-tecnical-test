@@ -1,8 +1,13 @@
-import { Typography } from '@mui/material'
+import {Typography} from '@mui/material'
 import React from 'react'
 
-export default function ({value}: {value: string}) {
-    return (
-        <Typography>{value}</Typography>
-    )
+const fontSize = 16;
+export default function ({value}: { value: string }) {
+  return (
+      <Typography
+          style={{fontSize}}
+      >
+        {value}
+      </Typography>
+  )
 }
