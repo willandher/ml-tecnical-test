@@ -1,12 +1,16 @@
 import {Typography} from '@mui/material'
-import React from 'react'
+import React, {CSSProperties} from 'react'
 
 const fontSize = 16;
-export default function ({value}: { value: string }) {
-  return (
+interface SubTitleOptions {
+    value: string
+    style?: CSSProperties
+}
+
+export default function  SubTitle ({value, style }:SubTitleOptions) {
+    return (
       <Typography
-          style={{fontSize}}
-      >
+          style={{fontSize, ...style}}>
         {value}
       </Typography>
   )
